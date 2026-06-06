@@ -2273,3 +2273,274 @@ button {
     font-size: 16px;
   }
 }
+
+.projects-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  background-image: url('./img/project-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.projects-hero__heading {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.projects-hero__title {
+  font-size: 80px;
+}
+
+.projects-hero__subtitle {
+  font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  .projects-hero__title {
+    font-size: 40px;
+  }
+
+  .projects-hero__subtitle {
+    font-size: 40px;
+  }
+}
+
+.projects__filter {
+  margin-bottom: 40px;
+}
+
+.projects__filter-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects__filter-item {
+  flex: 1;
+}
+
+.projects__filter-btn {
+  display: block;
+  width: 100%;        /* 填滿 item 寬度 */
+  padding: 12px;
+  background: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #24140B;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.projects__filter-btn:not(.projects__filter-btn--active):hover {
+  background: #f0f0f0;
+}
+
+.projects__filter-btn--active,
+.projects__filter-btn--active:hover {
+  background: #24140B;
+  color: #fff;
+  cursor: default;
+}
+
+.projects_more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .projects__filter-list {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .projects__filter-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects__filter-item {
+    flex: none;      /* 取消平分，改為依內容寬度 */
+    flex-shrink: 0;  /* 防止被壓縮 */
+  }
+
+  .projects__filter-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  padding: 16px;
+}
+
+.modal-overlay--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #fff;
+  max-width: 1076px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-width: none;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+/* 頂部導覽 */
+.modal__nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #404040;
+  padding: 4px 8px;
+}
+
+.modal__image-container {
+  max-width: 100%;
+  height: 294px;
+  overflow: hidden;
+}
+
+/* 專案主圖 */
+.modal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 內容區 */
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px;
+}
+
+.modal__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.modal__title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.modal__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 內文區塊 */
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.modal__desc-area {
+  display: flex;
+  gap: 24px;
+}
+
+.modal__desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #404040;
+  width: 70%;
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0px;
+  padding-left: 24px;
+  width: 30%;
+  border-left: 1px solid #737373;
+}
+
+.modal__info-item {
+  font-size: 14px;
+  color: #404040;
+  line-height: 1.6;
+}
+
+.modal__preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FDF7F1;
+  padding: 80px;
+}
+
+/* 完整預覽圖 */
+.modal__preview-image {
+  max-width: 720px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* 手機版 */
+@media (max-width: 768px) {
+  .modal {
+    max-height: 95vh;
+  }
+
+  .modal__title {
+    font-size: 18px;
+  }
+
+  .modal__body {
+    padding: 16px;
+  }
+}
