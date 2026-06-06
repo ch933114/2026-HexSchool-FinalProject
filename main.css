@@ -53,6 +53,31 @@ body {
   background-color: #FDF7F1;
   font-family: "Noto Sans TC", sans-serif;
 }
+
+@media (min-width: 769px) {
+  .header,
+  .hero__container,
+  .services-container,
+  .projects,
+  .blogs,
+  .subscription__container,
+  .footer__container,
+  .blog-list,
+  .blog-post-breadcrumb__container {
+    width: min(calc(100% - 48px), 1296px);
+    padding-inline: 0;
+  }
+
+  .blog-post-detail__container,
+  .service-hero__nav,
+  .service-flow,
+  .service-case,
+  .service-qa {
+    width: min(calc(100% - 48px), 1076px);
+    padding-inline: 0;
+  }
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -1335,6 +1360,7 @@ button {
 
 .blog__card {
   display: flex;
+  align-items: flex-start;
   gap: 0;
   overflow: hidden;
   cursor: pointer;
@@ -1347,10 +1373,12 @@ button {
 
 .blog__card-image {
   width: 50%;
-  height: 220px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
+  margin: auto;
 }
 
 .blog__card-body {
@@ -1360,6 +1388,7 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 12px;
+  margin: auto;
 }
 
 .blog__card-label {
@@ -1489,7 +1518,7 @@ button {
 
   .blog__card-image {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 9;
   }
 
   .blog__card-body {
