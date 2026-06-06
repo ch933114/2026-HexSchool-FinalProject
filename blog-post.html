@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>六角學院-最終任務</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 頂部導航 -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="./index.html"><img src="./img/logo.svg" alt="" /></a>
+      </h1>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="./services.html">服務項目</a></li>
+          <li class="header__nav-item"><a href="">專案作品</a></li>
+          <li class="header__nav-item"><a href="./blog.html">部落格</a></li>
+          <li class="header__nav-item"><a href="">與我聯絡</a></li>
+        </ul>
+
+        <!-- hamburger -->
+        <div class="header__hambuger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- 手機板選單黑幕 -->
+    <div class="overlay"></div>
+    <!-- Part1 : 麵包屑 -->
+    <section class="blog-post-breadcrumb">
+      <div class="blog-post-breadcrumb__container">
+        <p class="blog-post-breadcrumb__text">
+          <span>首頁</span><span>></span><span>部落格</span><span>></span
+          ><span> 當 AI 遇上介面設計...</span>
+        </p>
+      </div>
+    </section>
+    <!-- Part2 : 文章細節 -->
+    <section class="blog-post-detail">
+      <!-- 主要內容容器 -->
+      <div class="blog-post-detail__container">
+        <!-- 標籤 + 日期 + 標題 + 引言 -->
+        <div class="blog-post-detail__intro">
+          <div class="blog-post-detail__label-area">
+            <p class="blog-post-detail__label">
+              UIUX 設計 · 前端技術 · AI 趨勢應用
+            </p>
+            <p class="blog-post-detail__date">Oct 16, 2022</p>
+          </div>
+          <h1 class="blog-post-detail__title">
+            當 AI
+            遇上介面設計：資深設計師如何利用生成式工具重塑前端開發工作流與視覺想像力
+          </h1>
+          <h2 class="blog-post-detail__subtitle">
+            從像素到程式碼，探討 AI
+            如何成為數位職人的最強外掛，在美學與邏輯的交界處創造全新價值。
+          </h2>
+          <p>
+            在跨入 UI/UX 與前端領域的第十年，我見證了無數技術更迭，但 AI
+            的出現無疑是最具衝擊性的一場革命。本文將深度解析資深設計師如何將生成式
+            AI 整合進現有工作流，透過 AI
+            釋放視覺想像力，並利用智慧化工具優化前端開發效率，實踐美學與技術的完美共生。
+          </p>
+        </div>
+
+        <!-- 文章主體 -->
+        <div class="blog-post-detail__content">
+          <h3 class="blog-post-detail__heading">
+            視覺想像力的無限延伸：從 Moodboard 到驚艷視覺
+          </h3>
+          <p>
+            以往在發想專案視覺風格時，往往受限於素材搜尋的耗時或手繪草圖的限制。現在，透過
+            Midjourney 或 DALL-E
+            等工具，我能在幾分鐘內產出數十種具備極致美感的配色方案與佈局可能性。這並非取代設計師的審美，而是將我們從繁瑣的執行工作中解放，轉而擔任「視覺策展人」的角色，從龐大的
+            AI 提案中精煉出最契合品牌魂魄的視覺語言。
+          </p>
+          <img
+            class="blog-post-detail__img"
+            src="./img/post-deco-img.jpg"
+            alt=""
+          />
+          <p class="blog-post-detail__img-caption">
+            利用 AI 快速生成的品牌視覺概念圖，能有效縮短與客戶在初期的溝通成本。
+          </p>
+
+          <!-- 引言區塊 -->
+          <div class="blog-post-detail__quote">
+            <p class="blog-post-detail__quote-label">我認為</p>
+            <p class="blog-post-detail__quote-text">
+              AI 不會取代設計師，但那些懂得與 AI
+              協作的人，將會定義下一個世代的設計標準
+            </p>
+          </div>
+
+          <h2 class="blog-post-detail__subtitle">
+            工作流的重塑：當設計稿與程式碼無縫銜接
+          </h2>
+          <p>
+            身為前端工程師，最挑戰的環節往往是將精美的設計稿「精準轉譯」為流暢的程式碼。AI
+            的介入讓這個轉譯過程變得前所未有的流暢。無論是自動產生複雜的 CSS
+            佈局、建構 React 元件邏輯，還是優化響應式斷點，AI
+            就像是一位全天候待命的技術助理，讓我們能將精力集中在更高維度的互動體驗設計與產品效能優化。
+          </p>
+        </div>
+
+        <!-- 內容區外的圖片 -->
+        <img
+          class="blog-post-detail__img"
+          src="./img/post-deco-img2.jpg"
+          alt=""
+        />
+        <p class="blog-post-detail__img-caption">
+          AI 輔助生成的 Clean Code 結構，顯著提升開發整潔度。
+        </p>
+
+        <h2 class="blog-post-detail__subtitle">
+          跨領域利器：精選 AI 工具的實戰應用對比
+        </h2>
+        <p>
+          在數位職人的工具箱中，選擇正確的武器至關重要。為了讓大家在開發與設計的混合戰場中更具效率，我整理了一份實戰應用對比表。這份表格不僅是基於工具的功能，更是從我這十年的實務經驗出發，評估各項工具在實際專案中的落地價值與學習門檻，協助你快速找到最適合自己的
+          AI 隊友。
+        </p>
+        <h3 class="blog-post-detail__heading">
+          2026 數位職人必備 AI 工具效能對比表
+        </h3>
+
+        <!-- 表格 -->
+        <div class="blog-post-detail__table-wrapper">
+          <table class="blog-post-detail__table">
+            <thead>
+              <tr>
+                <th>工具名稱</th>
+                <th>應用範疇</th>
+                <th>核心優勢</th>
+                <th>學習曲線</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Midjourney</td>
+                <td>視覺構思</td>
+                <td>創意發想極致，適合風格探索與氛圍圖生成</td>
+                <td>中高</td>
+              </tr>
+              <tr>
+                <td>Figma AI</td>
+                <td>UI 設計</td>
+                <td>直接整合於設計稿，快速生成組件與圖表</td>
+                <td>低</td>
+              </tr>
+              <tr>
+                <td>GitHub Copilot</td>
+                <td>程式開發</td>
+                <td>邏輯代碼預測準確，減少重複性標籤撰寫</td>
+                <td>中</td>
+              </tr>
+              <tr>
+                <td>Claude</td>
+                <td>程式邏輯</td>
+                <td>具備強大文脈理解力，能優化複雜的用戶流程</td>
+                <td>中</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 底部：結語 + 瀏覽數 + 分享 -->
+        <div class="blog-post-detail__outro">
+          <p class="blog-post-detail__outro-text">
+            AI 的崛起並非數位職涯的終點，而是另一個高峰的起點。對於喜歡把美學與程式結合的我們來說，這是一個最好的時代。AI 給了我們更強大的雙翼，讓我們能飛得更高、看見更遠的設計地平線。保持好奇心，持續優化你的 Prompt，讓技術為藝術服務，創造出更多令人驚艷的作品。
+          </p>
+          <div class="blog-post-detail__footer">
+            <div class="blog-post-detail__stats">
+              <div class="blog-post-detail__views">
+                <img src="./img/view-icon.svg" alt="" />110 views
+              </div>
+              <div class="blog-post-detail__shares">
+                <img src="./img/share-icon.svg" alt="" />2 shares
+              </div>
+            </div>
+            <div class="blog-post-detail__social">
+              <span class="blog-post-detail__social-label">分享</span>
+              <button class="blog-post__links-btn">
+                <img src="./img/icon-share-black.svg" alt="" />
+              </button>
+              <button class="blog-post__links-btn">
+                <img src="./img/icon-ins-black.svg" alt="" />
+              </button>
+              <button class="blog-post__links-btn">
+                <img src="./img/icon-line-black.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Part3 : 相關文章 -->
+    <section class="blogs">
+      <div class="blogs__header">
+        <div>
+          <p class="blogs__label">相關文章</p>
+          <h2 class="blogs__title">RELATED BLOG</h2>
+        </div>
+      </div>
+      <div class="blogs__cards">
+        <ul class="blogs__cards-list">
+          <li class="blogs__card">
+            <img class="blogs__card-image" src="./img/blog-img1.png" alt="" />
+            <div class="blogs__card-body">
+              <p class="blogs__card-label">UIUX設計 · 設計規範 · 前端技術</p>
+              <h3 class="blogs__card-title">
+                10年職人手記：如何運用 Figma 與 Storybook
+                打造美感與邏輯兼具的企業級設計系統
+              </h3>
+              <div class="blogs__card-meta">
+                <span class="blogs__card-date">Oct 16, 2022</span>
+                <span class="blogs__card-stats">
+                  <div class="blogs__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blogs__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="blogs__card">
+            <img class="blogs__card-image" src="./img/blog-img2.png" alt="" />
+            <div class="blogs__card-body">
+              <p class="blogs__card-label">品牌設計 · 平面設計 · UIUX設計</p>
+              <h3 class="blogs__card-title">
+                從平面識別到數位體驗：以「植感生活」為例，探討跨媒體品牌視覺在網頁上的精準轉譯
+              </h3>
+              <div class="blogs__card-meta">
+                <span class="blogs__card-date">Oct 16, 2022</span>
+                <span class="blogs__card-stats">
+                  <div class="blogs__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blogs__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="blogs__card">
+            <img class="blogs__card-image" src="./img/blog-img3.png" alt="" />
+            <div class="blogs__card-body">
+              <p class="blogs__card-label">前端技術 · 後端架構 · AI趨勢應用</p>
+              <h3 class="blogs__card-title">
+                揭開金融 App 的設計密碼：如何優化 Open Bank API
+                的複雜數據呈現與後端串接安全性
+              </h3>
+              <div class="blogs__card-meta">
+                <span class="blogs__card-date">Oct 16, 2022</span>
+                <span class="blogs__card-stats">
+                  <div class="blogs__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blogs__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Part4 : 與我聯絡 -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <div class="footer__info-upper">
+            <div class="footer__heading">
+              <p class="footer__label">與我聯絡</p>
+              <h2 class="footer__title">CONTACT</h2>
+            </div>
+            <div class="footer__desc">
+              <p class="footer__desc-text">若有數位產品設計和開發相關問題</p>
+              <p class="footer__desc-text">歡迎填寫表單 或 直接與我聯絡！</p>
+            </div>
+          </div>
+          <div class="footer__link">
+            <a class="footer__email" href="mailto:service@hexschool.com"
+              ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+            >
+            <div class="footer__links-btns">
+              <button class="footer__links-btn">
+                <img src="./img/icon-instagram.svg" alt="" />
+              </button>
+              <button class="footer__links-btn">
+                <img src="./img/icon-line.svg" alt="" />
+              </button>
+              <button class="footer__links-btn">
+                <img src="./img/icon-linkedin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__form-wrapper">
+          <form class="footer__form" action="">
+            <div class="footer__form-group">
+              <input class="footer__input" type="text" placeholder="姓名" />
+              <input class="footer__input" type="text" placeholder="手機號碼" />
+            </div>
+            <input class="footer__input" type="email" placeholder="電子信箱" />
+            <textarea class="footer__textarea" placeholder="備註"></textarea>
+            <button class="footer__btn" type="submit">送出</button>
+          </form>
+        </div>
+        <div class="footer__link-mobile">
+          <div class="footer__links-btns">
+            <button class="footer__links-btn">
+              <img src="./img/icon-instagram.svg" alt="" />
+            </button>
+            <button class="footer__links-btn">
+              <img src="./img/icon-line.svg" alt="" />
+            </button>
+            <button class="footer__links-btn">
+              <img src="./img/icon-linkedin.svg" alt="" />
+            </button>
+          </div>
+          <a class="footer__email" href="mailto:service@hexschool.com"
+            ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

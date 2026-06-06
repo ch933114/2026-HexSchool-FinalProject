@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>六角學院-最終任務</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 頂部導航 -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="./index.html"><img src="./img/logo.svg" alt="" /></a>
+      </h1>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="">服務項目</a></li>
+          <li class="header__nav-item"><a href="">專案作品</a></li>
+          <li class="header__nav-item"><a href="./blog.html">部落格</a></li>
+          <li class="header__nav-item"><a href="">與我聯絡</a></li>
+        </ul>
+
+        <!-- hamburger -->
+        <div class="header__hambuger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- 手機板選單黑幕 -->
+    <div class="overlay"></div>
+    <!-- Part1 : 服務看板 -->
+    <section class="service-hero">
+      <div class="service-hero__heading">
+        <p class="service-hero__title">SERVICES</p>
+        <p class="service-hero__subtitle">服務項目</p>
+      </div>
+
+      <div class="service-hero__nav">
+        <ul class="service-hero__nav-list">
+          <li class="service-hero__nav-item service-hero__nav-item--active">
+            <img
+              class="service-hero__nav-icon"
+              src="./img/service-icon1-white.svg"
+              alt=""
+            />
+            <p class="service-hero__nav-en">GRAPHIC</p>
+            <p class="service-hero__nav-zh">平面設計</p>
+          </li>
+          <li class="service-hero__nav-item">
+            <img
+              class="service-hero__nav-icon"
+              src="./img/service-icon2.svg"
+              alt=""
+            />
+            <p class="service-hero__nav-en">WEBSITE</p>
+            <p class="service-hero__nav-zh">網頁設計</p>
+          </li>
+          <li class="service-hero__nav-item">
+            <img
+              class="service-hero__nav-icon"
+              src="./img/service-icon3.svg"
+              alt=""
+            />
+            <p class="service-hero__nav-en">FRONTEND</p>
+            <p class="service-hero__nav-zh">前端切版</p>
+          </li>
+          <li class="service-hero__nav-item">
+            <img
+              class="service-hero__nav-icon"
+              src="./img/service-icon4.svg"
+              alt=""
+            />
+            <p class="service-hero__nav-en">BACKEND</p>
+            <p class="service-hero__nav-zh">後端開發</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Part2 : 服務流程 -->
+    <div class="service-container">
+      <section class="service-flow">
+        <!-- 左側標題 -->
+        <div class="service-flow__heading">
+          <p class="service-flow__label">SERVICE STEPS</p>
+          <h2 class="service-flow__title">服務流程</h2>
+        </div>
+
+        <!-- 右側步驟列表 -->
+        <ol class="service-flow__list">
+          <li class="service-flow__item">
+            <div class="service-flow__step-wrapper">
+              <div class="service-flow__step">1</div>
+            </div>
+            <div class="service-flow__body">
+              <h3 class="service-flow__item-title">需求訪談與視覺定位</h3>
+              <p class="service-flow__item-desc">
+                深度溝通品牌核心價值，確認目標受眾與視覺風格，制定符合商業邏輯的設計藍圖。
+              </p>
+            </div>
+          </li>
+          <li class="service-flow__item">
+            <div class="service-flow__step-wrapper">
+              <div class="service-flow__step">2</div>
+            </div>
+            <div class="service-flow__body">
+              <h3 class="service-flow__item-title">概念發展與方案提案</h3>
+              <p class="service-flow__item-desc">
+                將抽象概念具象化，提供多層次的設計提案，確保視覺語言精準傳遞品牌獨特魅力。
+              </p>
+            </div>
+          </li>
+          <li class="service-flow__item">
+            <div class="service-flow__step-wrapper">
+              <div class="service-flow__step">3</div>
+            </div>
+            <div class="service-flow__body">
+              <h3 class="service-flow__item-title">匠心編排與細節校正</h3>
+              <p class="service-flow__item-desc">
+                針對初稿進行多輪細緻微調，優化排版層次與色彩表現，追求美學與易讀性的完美平衡。
+              </p>
+            </div>
+          </li>
+          <li class="service-flow__item">
+            <div class="service-flow__step-wrapper">
+              <div class="service-flow__step">4</div>
+            </div>
+            <div class="service-flow__body">
+              <h3 class="service-flow__item-title">專業檔案交付結案</h3>
+              <p class="service-flow__item-desc">
+                提供完整原始碼與多樣格式輸出，並附上使用規範建議，確保品牌形象在各處始終如一。
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+    <!-- Part3 : 客戶案例 -->
+    <div class="service-case-container">
+      <section class="service-case">
+        <!-- 上方標題 -->
+        <div class="service-case__heading">
+          <p class="service-case__label">USER CASE</p>
+          <h2 class="service-case__title">客戶案例</h2>
+        </div>
+
+        <!-- 下方卡片列表 -->
+        <ul class="service-case__list">
+          <li class="service-case__item">
+            <div class="service-case__card">
+              <img
+                class="service-case__card-image"
+                src="./img/project1.png"
+                alt=""
+              />
+              <div class="service-case__card-body">
+                <div class="service-case__card-tag-area">
+                    <p class="service-case__card-tag">平面設計 · 網頁設計</p>
+                    <p class="service-case__card-date">Oct 16, 2025</p>
+                </div>
+                <p class="service-case__card-title">
+                  品牌視覺與電商整合，多肉植物品牌電商建置
+                </p>
+                <div class="service-case__card-desc-area">
+                    <p class="service-case__card-desc">
+                  從品牌識別設計到 RWD 網站開發，打造療癒系植栽購物體驗
+                </p>
+                <button class="btn--primary service-case__card-btn">
+                  <img src="./img/icon-filled-btn.svg" alt="">
+                </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="service-case__item">
+            <div class="service-case__card">
+              <img
+                class="service-case__card-image"
+                src="./img/project2.png"
+                alt=""
+              />
+              <div class="service-case__card-body">
+                <div class="service-case__card-tag-area">
+                     <p class="service-case__card-tag">
+                    平面設計 · 網頁設計 · 前端切版
+                  </p>
+                  <p class="service-case__card-date">Oct 16, 2025</p>
+                </div>
+                <p class="service-case__card-title">
+                  數位產品 UI/UX 設計，個人化財務視覺化軟體
+                </p>
+                <div class="service-case__card-desc-area">
+                      <p class="service-case__card-desc">
+                  運用數據視覺化邏輯，將複雜的財務數據轉化為直覺的操作介面
+                </p>
+                <button class="btn--primary service-case__card-btn">
+                  <img src="./img/icon-filled-btn.svg" alt="">
+                </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- Part4 : 常見問題 -->
+<div class="service-qa-container">
+  <section class="service-qa">
+
+    <!-- 左側標題 -->
+    <div class="service-qa__heading">
+      <p class="service-qa__label">FAQ</p>
+      <h2 class="service-qa__title">常見問題</h2>
+    </div>
+
+    <!-- 右側手風琴 -->
+<ul class="service-qa__list">
+
+  <li class="service-qa__item">
+    <details class="service-qa__details">
+      <summary class="service-qa__question">
+        <span class="service-qa__number">01</span>
+        <span class="service-qa__text">設計提案後包含幾次修改機會？</span>
+        <span class="service-qa__icon"><img src="./img/icon-arrow-down.svg" alt=""></span>
+      </summary>
+      <p class="service-qa__answer">每項設計提案皆包含合理範圍內的調整服務，通常提供 2～3 次細節優化機會。我們重視溝通品質與成果完整度，將依據品牌需求細緻調整，確保最終呈現符合期待。</p>
+    </details>
+  </li>
+
+  <li class="service-qa__item">
+    <details class="service-qa__details">
+      <summary class="service-qa__question">
+        <span class="service-qa__number">02</span>
+        <span class="service-qa__text">平面設計的成果，未來能直接應用在網頁嗎？</span>
+        <span class="service-qa__icon"><img src="./img/icon-arrow-down.svg" alt=""></span>
+      </summary>
+      <p class="service-qa__answer">可以。設計階段會同步考量數位應用情境，包含版面結構、視覺層級與跨裝置呈現，使成果能順暢延伸至網站開發與品牌數位體驗。</p>
+    </details>
+  </li>
+
+  <li class="service-qa__item">
+    <details class="service-qa__details">
+      <summary class="service-qa__question">
+        <span class="service-qa__number">03</span>
+        <span class="service-qa__text">完成一套完整的設計流程需要多久？</span>
+        <span class="service-qa__icon"><img src="./img/icon-arrow-down.svg" alt=""></span>
+      </summary>
+      <p class="service-qa__answer">視專案複雜度而定，一般約需 10 到 14 個工作日。透過嚴格執行的「四步驟流程」，我們能確保每個階段都有明確的進度產出，有效避免時程延宕。若有特定的上線期限，歡迎在訪談階段提出，我會為您評估最合適的排程。</p>
+    </details>
+  </li>
+
+  <li class="service-qa__item">
+    <details class="service-qa__details">
+      <summary class="service-qa__question">
+        <span class="service-qa__number">04</span>
+        <span class="service-qa__text">完稿後如果需要修改怎麼辦？</span>
+        <span class="service-qa__icon"><img src="./img/icon-arrow-down.svg" alt=""></span>
+      </summary>
+      <p class="service-qa__answer">視專案複雜度而定，一般約需 10 到 14 個工作日。透過嚴格執行的「四步驟流程」，我們能確保每個階段都有明確的進度產出，有效避免時程延宕。若有特定的上線期限，歡迎在訪談階段提出，我會為您評估最合適的排程。</p>
+    </details>
+  </li>
+
+</ul>
+
+  </section>
+</div>
+    <!-- Part5 : 與我聯絡 -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <div class="footer__info-upper">
+            <div class="footer__heading">
+              <p class="footer__label">與我聯絡</p>
+              <h2 class="footer__title">CONTACT</h2>
+            </div>
+            <div class="footer__desc">
+              <p class="footer__desc-text">若有數位產品設計和開發相關問題</p>
+              <p class="footer__desc-text">歡迎填寫表單 或 直接與我聯絡！</p>
+            </div>
+          </div>
+          <div class="footer__link">
+            <a class="footer__email" href="mailto:service@hexschool.com"
+              ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+            >
+            <div class="footer__links-btns">
+              <button class="footer__links-btn">
+                <img src="./img/icon-instagram.svg" alt="" />
+              </button>
+              <button class="footer__links-btn">
+                <img src="./img/icon-line.svg" alt="" />
+              </button>
+              <button class="footer__links-btn">
+                <img src="./img/icon-linkedin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__form-wrapper">
+          <form class="footer__form" action="">
+            <div class="footer__form-group">
+              <input class="footer__input" type="text" placeholder="姓名" />
+              <input class="footer__input" type="text" placeholder="手機號碼" />
+            </div>
+            <input class="footer__input" type="email" placeholder="電子信箱" />
+            <textarea class="footer__textarea" placeholder="備註"></textarea>
+            <button class="footer__btn" type="submit">送出</button>
+          </form>
+        </div>
+        <div class="footer__link-mobile">
+          <div class="footer__links-btns">
+            <button class="footer__links-btn">
+              <img src="./img/icon-instagram.svg" alt="" />
+            </button>
+            <button class="footer__links-btn">
+              <img src="./img/icon-line.svg" alt="" />
+            </button>
+            <button class="footer__links-btn">
+              <img src="./img/icon-linkedin.svg" alt="" />
+            </button>
+          </div>
+          <a class="footer__email" href="mailto:service@hexschool.com"
+            ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
