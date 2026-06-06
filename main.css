@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +18,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -35,7 +29,6 @@ footer, header, hgroup, menu, nav, section {
   box-sizing: border-box;
 }
 
-/* Chrome Safari Edge */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -106,7 +99,6 @@ button {
     align-items: center;
 }
 
-/* nav */
 .header__nav-list {
     display: flex;
     align-items: center;
@@ -123,7 +115,6 @@ button {
   cursor: pointer;
 }
 
-/* hamburger */
 .header__hambuger {
     display: none;
     justify-content: center;
@@ -155,7 +146,6 @@ button {
     top: 26px;
 }
 
-/* 黑幕 */
 .overlay {
     position: fixed;
     inset: 0;
@@ -167,11 +157,14 @@ button {
     margin-top: 44px;
 }
 
-/* 手機板 */
 @media (max-width: 768px) {
 
     .header {
-        padding: 0 12px;
+        padding: 12px;
+        position: sticky;
+        top: 0;
+        background: #FDF7F1;
+        z-index: 1002;
     }
 
     .header__hambuger {
@@ -182,24 +175,26 @@ button {
         position: fixed;
         top: -100%;
         left: 0;
-
         width: 100%;
+        height: auto;
         background: #FDF7F1;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 12px;
-
-        padding: 12px 0;
-        margin-top: 44px;
+        overflow-y: auto;
+        padding: 12px 0 24px;
         transition: .4s ease;
         z-index: 999;
     }
 
-    /* menu open */
     body.menu-open .header__nav-list {
-        top: 0;
+        top: 57px;
+    }
+
+    .overlay {
+        top: 52px;
+        margin-top: 0;
     }
 
     body.menu-open .overlay {
@@ -207,7 +202,6 @@ button {
         visibility: visible;
     }
 
-    /* hamburger -> X */
     body.menu-open .header__hambuger span:nth-child(1) {
         transform: rotate(45deg);
         top: 19px;
@@ -223,7 +217,6 @@ button {
     }
 }
 
-/* ===== Hero Section ===== */
 .hero {
   overflow: hidden;
 }
@@ -239,7 +232,6 @@ button {
   height: 800px;
 }
 
-/* ===== 左側文字 ===== */
 .hero__content {
   flex: 1;
   display: flex;
@@ -294,7 +286,6 @@ button {
   margin-bottom: 60px;
 }
 
-/* ===== 按鈕 ===== */
 .hero__actions {
   display: flex;
   gap: 16px;
@@ -329,7 +320,6 @@ button {
   color: #fff;
 }
 
-/* ===== 右側圖片 ===== */
 .hero__image {
   flex: 1;
   height: 100%;
@@ -434,7 +424,6 @@ button {
   }
 }
 
-/* ===== Services Section ===== */
 .services {
   padding: 80px 0;
   background-color: #24140B;
@@ -445,7 +434,6 @@ button {
   margin: 0 auto;
 }
 
-/* ===== Header ===== */
 .services__header {
   font-weight: 700;
   color: white;
@@ -460,7 +448,6 @@ button {
   font-size: 80px;
 }
 
-/* ===== List ===== */
 .services__list {
   display: flex;
   gap: 24px;
@@ -476,7 +463,6 @@ button {
   display: none;
 }
 
-/* ===== Card ===== */
 .services__card {
   background-color: white;
   padding: 24px;
@@ -487,11 +473,6 @@ button {
   width: 300px;
   gap: 12px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.services__card-header {
-  display: flex;
-  justify-content: space-between;
 }
 
 .services__card-header {
@@ -523,6 +504,19 @@ button {
 .services__card-desc {
   font-size: 16px;
   font-weight: 500;
+}
+
+.services__card-desarea button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.services__card-desarea button:hover {
+  transform: translateX(4px);
+  filter: brightness(0.92);
 }
 
 @media (max-width: 768px) {
@@ -559,7 +553,6 @@ button {
   }
 }
 
-/* ===== Projects Section ===== */
 .projects-container {
   background-color: white;
 }
@@ -586,14 +579,12 @@ button {
   font-size: 80px;
 }
 
-/* ===== List ===== */
 .projects__list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-/* ===== Card ===== */
 .projects__card {
   position: relative;
   height: 360px;
@@ -603,11 +594,8 @@ button {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* 拿掉 ::before 遮罩，不需要了 */
-
 .projects__card-info {
-  position: absolute;        /* 疊在圖片上 */
-  top: 50%;
+  position: absolute;        top: 50%;
   left: 40px;
   transform: translateY(-50%);
   z-index: 1;
@@ -616,8 +604,7 @@ button {
   gap: 12px;
   padding: 32px;
   width: 320px;
-  background-color: #fff;    /* 白色方塊 */
-  box-sizing: border-box;
+  background-color: #fff;    box-sizing: border-box;
 }
 
 .projects__card-date {
@@ -648,11 +635,6 @@ button {
   margin: 0 auto;
 }
 
-.projects__card-btn:hover {
-  background-color: #404040;
-  color: #fff;
-}
-
 .projects__footer {
     display: flex;
     justify-content: center;
@@ -680,7 +662,6 @@ button {
     background-position: center bottom;
   }
 
-  /* 圖片區用 ::before 撐高度 */
   .projects__card::before {
     content: '';
     display: block;
@@ -690,13 +671,11 @@ button {
   .projects__card-info {
     position: static;
     transform: none;
-    width: auto;              /* 改：不設 100% */
-    max-width: 100%;
+    width: auto;              max-width: 100%;
     left: auto;
     top: auto;
     padding: 24px;
-    margin: 16px;             /* 保留 margin */
-    background-color: #fff;
+    margin: 16px;             background-color: #fff;
     box-sizing: border-box;
   }
 }
@@ -743,7 +722,6 @@ button {
   color: #fff;
 }
 
-/* 外層容器：橫向滾動 */
 .blogs__cards {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -753,7 +731,6 @@ button {
   display: none;
 }
 
-/* 卡片列表：並排不換行 */
 .blogs__cards-list {
   display: flex;
   gap: 24px;
@@ -763,7 +740,6 @@ button {
   margin: 0;
 }
 
-/* 卡片本體 */
 .blogs__card {
   width: 416px;
   flex-shrink: 0;
@@ -772,7 +748,6 @@ button {
   flex-direction: column;
 }
 
-/* 封面圖 */
 .blogs__card-image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -780,7 +755,6 @@ button {
   display: block;
 }
 
-/* 文字內容區 */
 .blogs__card-body {
   padding: 12px 0px 0px;
   display: flex;
@@ -789,13 +763,11 @@ button {
   flex: 1;
 }
 
-/* 分類標籤 */
 .blogs__card-label {
   font-size: 16px;
   font-weight: 500;
 }
 
-/* 標題 */
 .blogs__card-title {
   font-size: 24px;
   font-weight: 700;
@@ -852,7 +824,6 @@ button {
   }
 }
 
-/* 背景圖片區塊 */
 .subscription {
   background-image: url('./img/subscription-bg.png');
   background-size: cover;
@@ -866,17 +837,14 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* 0.5 調整透明度 */
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.5); z-index: 0;
 }
 
-/* 內容要浮在遮罩上面 */
 .subscription__container {
   position: relative;
   z-index: 1;
 }
 
-/* 左右兩欄容器 */
 .subscription__container {
   display: flex;
   align-items: center;
@@ -885,7 +853,6 @@ button {
   margin: 0 auto;
 }
 
-/* 左側 deco 圖 */
 .subscription__deco {
   width: 526px;
   max-width: 526px;
@@ -900,7 +867,6 @@ button {
   object-position: center;
 }
 
-/* 右側表單區 */
 .subscription__form-wrapper {
   flex: 1;
   display: flex;
@@ -910,23 +876,19 @@ button {
   padding: 40px 80px;
 }
 
-/* 小標籤 */
 .subscription__label {
   font-size: 16px;
 }
 
-/* 大標題 */
 .subscription__title {
   font-size: 80px;
   font-weight: 700;
 }
 
-/* 說明文字 */
 .subscription__desc {
   font-size: 16px;
 }
 
-/* input + button 群組 */
 .subscription__input-group {
   display: flex;
   border: 1px solid white;
@@ -935,7 +897,6 @@ button {
   overflow: hidden;
 }
 
-/* 輸入框 */
 .subscription__input {
   all: unset;
   flex: 1;
@@ -955,7 +916,6 @@ button {
   border-color: #111;
 }
 
-/* 送出按鈕（outline 風格） */
 .subscription__btn {
   height: 44px;
   margin-right: 10px;
@@ -974,7 +934,6 @@ button {
   color: #fff;
 }
 
-/* RWD：手機板改為單欄 */
 @media (max-width: 900px) {
   .subscription {
     max-height: none;
@@ -1001,12 +960,10 @@ button {
     max-width: 100%;
   }
 
-  /* 小標籤 */
   .subscription__label {
     font-size: 14px;
   }
 
-  /* 大標題 */
   .subscription__title {
     font-size: 40px;
   }
@@ -1021,7 +978,6 @@ button {
   color: #fff;
 }
 
-/* 左右兩欄容器 */
 .footer__container {
   display: flex;
   align-items: stretch;
@@ -1031,7 +987,6 @@ button {
   padding: 80px 0;
 }
 
-/* 左側文字區 */
 .footer__info {
   flex: 1;
   display: flex;
@@ -1050,17 +1005,14 @@ button {
   font-weight: 700;
 }
 
-/* 小標 */
 .footer__label {
   font-size: 16px;
 }
 
-/* 大標題 */
 .footer__title {
   font-size: 80px;
 }
 
-/* 說明文字 */
 .footer__desc {
   display: flex;
   flex-direction: column;
@@ -1084,7 +1036,6 @@ button {
   display: none;
 }
 
-/* Email 連結 */
 .footer__email {
   display: flex;
   align-items: center;
@@ -1110,9 +1061,16 @@ button {
   padding: 12px;
   border-radius: 999px;
   border: 1px solid white;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-/* 右側表單區 */
+.footer__links-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.72);
+  transform: translateY(-2px);
+}
+
 .footer__form-wrapper {
   flex: 1;
   display: flex;
@@ -1132,7 +1090,6 @@ button {
   gap: 24px;
 }
 
-/* 輸入框 */
 .footer__input,
 .footer__textarea {
   width: 100%;
@@ -1156,14 +1113,12 @@ button {
   border-color: #fff;
 }
 
-/* 備註文字框 */
 .footer__textarea {
   flex: 1;
   height: 120px;
   resize: none;
 }
 
-/* 送出按鈕（outline 風格） */
 .footer__btn {
   height: 44px;
   background: white;
@@ -1174,11 +1129,10 @@ button {
 }
 
 .footer__btn:hover {
-  background: transparent;
+  background: #24140B;
   color: white;
 }
 
-/* RWD：手機板改單欄 */
 @media (max-width: 768px) {
   .footer__container {
     flex-direction: column;
@@ -1221,7 +1175,6 @@ button {
   }
 }
 
-/* Blog.html */
 .blog-hero {
   display: flex;
   align-items: center;
@@ -1291,9 +1244,6 @@ button {
   background-color: white;
 }
 
-/* =====================
-   Section 整體版面
-   ===================== */
 .blog-list {
   display: flex;
   gap: 48px;
@@ -1303,9 +1253,6 @@ button {
   margin: 0 auto;
 }
 
-/* =====================
-   左側導覽列
-   ===================== */
 .blog-list__nav {
   flex: 0 0 140px;
   position: sticky;
@@ -1347,12 +1294,8 @@ button {
 .blog-list__nav-btn--active:hover {
   background: #24140B;
   color: #fff;
-  cursor: default; /* 選填：active 時不顯示手指游標 */
-}
+  cursor: default; }
 
-/* =====================
-   右側卡片區
-   ===================== */
 .blog-list__cards {
   flex: 1;
   min-width: 0;
@@ -1367,19 +1310,18 @@ button {
   gap: 24px;
 }
 
-/* =====================
-   卡片
-   ===================== */
 .blog__card {
   display: flex;
   gap: 0;
   overflow: hidden;
   cursor: pointer;
-  text-decoration: none;  /* 移除底線 */
-  color: inherit;
+  text-decoration: none;  color: inherit;
 }
 
-/* 左側圖片 */
+.blog__card:hover {
+  color: #006994;
+}
+
 .blog__card-image {
   width: 50%;
   height: 220px;
@@ -1388,7 +1330,6 @@ button {
   flex-shrink: 0;
 }
 
-/* 右側內容 */
 .blog__card-body {
   width: 50%;
   padding: 24px 28px;
@@ -1407,7 +1348,6 @@ button {
   font-weight: 700;
 }
 
-/* Meta：日期 + 統計 */
 .blog__card-meta {
   display: flex;
   align-items: center;
@@ -1484,14 +1424,12 @@ button {
 }
 
 @media (max-width: 768px) {
-  /* 整體版面 */
   .blog-list {
     flex-direction: column;
     gap: 24px;
     padding: 32px 16px;
   }
 
-  /* 導覽列：水平可滑動 */
   .blog-list__nav {
     position: static;
     width: 100%;
@@ -1503,7 +1441,6 @@ button {
     overflow-x: auto;
     padding-bottom: 8px;
 
-    /* 隱藏捲軸但保留滑動 */
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -1514,8 +1451,7 @@ button {
 
   .blog-list__nav-list li {
     width: auto;
-    flex-shrink: 0; /* 防止按鈕被壓縮 */
-  }
+    flex-shrink: 0; }
 
   .blog-list__nav-btn {
     white-space: nowrap;
@@ -1523,7 +1459,6 @@ button {
     font-size: 14px;
   }
 
-  /* 卡片：圖上文下 */
   .blog__card {
     flex-direction: column;
     gap: 8px;
@@ -1552,9 +1487,6 @@ button {
   }
 }
 
-/* =====================
-   麵包屑
-   ===================== */
 .blog-post-breadcrumb {
   background-color: #24140B;
 }
@@ -1573,9 +1505,6 @@ button {
   color: white;
 }
 
-/* =====================
-   文章詳細頁
-   ===================== */
 .blog-post-detail {
   background-color: #fff;
 }
@@ -1589,7 +1518,6 @@ button {
   gap: 24px;
 }
 
-/* 標籤 + 日期 + 大標題區 */
 .blog-post-detail__intro {
   display: flex;
   flex-direction: column;
@@ -1625,7 +1553,6 @@ button {
   font-weight: 700;
 }
 
-/* 文章主體 */
 .blog-post-detail__content {
   display: flex;
   flex-direction: column;
@@ -1636,7 +1563,6 @@ button {
   font-size: 16px;
 }
 
-/* 圖片 */
 .blog-post-detail__img {
   width: 100%;
   height: 486px;
@@ -1648,7 +1574,6 @@ button {
   font-size: 13px;
 }
 
-/* 引言區塊 */
 .blog-post-detail__quote {
   padding: 24px;
   background-color: #FDF7F1;
@@ -1668,7 +1593,6 @@ button {
   font-weight: 700;
 }
 
-/* 表格 */
 .blog-post-detail__table-wrapper {
   overflow-x: auto;
 }
@@ -1698,7 +1622,6 @@ button {
   color: #24140B;
 }
 
-/* 結語區 */
 .blog-post-detail__outro {
   display: flex;
   flex-direction: column;
@@ -1713,7 +1636,6 @@ button {
   padding-top: 16px;
 }
 
-/* 底部：瀏覽數 + 分享 */
 .blog-post-detail__footer {
   display: flex;
   align-items: center;
@@ -1751,11 +1673,14 @@ button {
   padding: 12px;
   border-radius: 999px;
   border: 1px solid #404040;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* =====================
-   手機版
-   ===================== */
+.blog-post__links-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .blog-post-breadcrumb {
     padding: 0px 12px;
@@ -1803,9 +1728,6 @@ button {
   }
 }
 
-/* =====================
-   Service Hero
-   ===================== */
 .service-hero {
   display: flex;
   flex-direction: column;
@@ -1829,7 +1751,6 @@ button {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* 標題區 */
 .service-hero__heading {
   position: relative;
   text-align: center;
@@ -1845,21 +1766,7 @@ button {
   font-size: 48px;
 }
 
-/* 裝飾文字 */
-.service-hero__text-deco {
-  position: absolute;
-  left: 50%;
-  bottom: -40%;
-  font-size: 300px;
-  font-weight: 700;
-  color: #FDF7F1;
-  opacity: 20%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  pointer-events: none;
-}
 
-/* 服務項目列表 */
 .service-hero__nav {
   position: relative;
   max-width: 1076px;
@@ -1904,9 +1811,6 @@ button {
   font-weight: 700;
 }
 
-/* =====================
-   手機版
-   ===================== */
 @media (max-width: 768px) {
   .service-hero {
     gap: 24px;
@@ -1921,12 +1825,6 @@ button {
     font-size: 40px;
   }
 
-  .service-hero__text-deco {
-    bottom: -19%;
-    font-size: 160px;
-  }
-
-  /* 2x2 換行 */
   .service-hero__nav-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1934,8 +1832,7 @@ button {
   }
 
   .service-hero__nav-item {
-    width: 100%; /* 覆蓋桌機的 25% */
-    padding: 20px 16px;
+    width: 100%; padding: 20px 16px;
   }
 
   .service-hero__nav-icon {
@@ -1965,7 +1862,6 @@ button {
   padding: 80px 0;
 }
 
-/* 左側標題 */
 .service-flow__heading {
   flex: 0 0 240px;
   position: sticky;
@@ -1985,7 +1881,6 @@ button {
   font-size: 48px;
 }
 
-/* 右側步驟列表 */
 .service-flow__list {
   flex: 1;
   display: flex;
@@ -2001,7 +1896,6 @@ button {
   gap: 24px;
 }
 
-/* 數字圓圈 */
 .service-flow__step {
   flex-shrink: 0;
   width: 40px;
@@ -2052,7 +1946,6 @@ button {
   display: none;
 }
 
-/* 手機版 */
 @media (max-width: 768px) {
   .service-flow {
     flex-direction: column;
@@ -2091,7 +1984,6 @@ button {
   gap: 40px;
 }
 
-/* 上方標題 */
 .service-case__heading {
   font-weight: 700;
 }
@@ -2115,10 +2007,8 @@ button {
 }
 
 .service-case__item {
-  width: calc(50% - 12px); /* 12px 是 gap 的一半 */
-}
+  width: calc(50% - 12px); }
 
-/* 卡片：上圖下文 */
 .service-case__card {
   display: flex;
   flex-direction: column;
@@ -2168,9 +2058,13 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 999px;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* 手機版 */
+.service-case__card-btn:hover {
+  filter: brightness(0.92);
+}
+
 @media (max-width: 768px) {
   .service-case {
     padding: 40px 12px;
@@ -2204,7 +2098,6 @@ button {
   padding: 80px 0;
 }
 
-/* 左側標題 */
 .service-qa__heading {
   flex: 0 0 240px;
   position: sticky;
@@ -2220,7 +2113,6 @@ button {
   font-size: 48px;
 }
 
-/* 右側列表 */
 .service-qa__list {
   width: 100%;
   list-style: none;
@@ -2239,10 +2131,8 @@ button {
 }
 
 .service-qa__text {
-  flex: 1; /* 撐滿剩餘空間，把 icon 推到最右 */
-}
+  flex: 1; }
 
-/* 手風琴 */
 .service-qa__details[open] .service-qa__icon {
   transform: rotate(180deg);
 }
@@ -2271,10 +2161,8 @@ button {
 
 .service-qa__answer {
   font-size: 16px;
-  padding: 0 0 24px 48px; /* 左邊 32px 對齊 __number 的 min-width */
-}
+  padding: 0 0 24px 48px; }
 
-/* 手機版 */
 @media (max-width: 768px) {
   .service-qa {
     flex-direction: column;
@@ -2363,8 +2251,7 @@ button {
 
 .projects__filter-btn {
   display: block;
-  width: 100%;        /* 填滿 item 寬度 */
-  padding: 12px;
+  width: 100%;        padding: 12px;
   background: none;
   font-size: 18px;
   font-weight: 700;
@@ -2404,9 +2291,7 @@ button {
   }
 
   .projects__filter-item {
-    flex: none;      /* 取消平分，改為依內容寬度 */
-    flex-shrink: 0;  /* 防止被壓縮 */
-  }
+    flex: none;      flex-shrink: 0;  }
 
   .projects__filter-btn {
     font-size: 14px;
@@ -2447,7 +2332,6 @@ button {
   display: none;
 }
 
-/* 頂部導覽 */
 .modal__nav {
   display: flex;
   justify-content: flex-end;
@@ -2465,6 +2349,13 @@ button {
   cursor: pointer;
   color: #404040;
   padding: 4px 8px;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal__close:hover {
+  background-color: #f5f5f5;
+  color: #111;
 }
 
 .modal__image-container {
@@ -2473,14 +2364,12 @@ button {
   overflow: hidden;
 }
 
-/* 專案主圖 */
 .modal__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* 內容區 */
 .modal__body {
   display: flex;
   flex-direction: column;
@@ -2505,7 +2394,6 @@ button {
   font-weight: 500;
 }
 
-/* 內文區塊 */
 .modal__content {
   display: flex;
   flex-direction: column;
@@ -2549,7 +2437,6 @@ button {
   padding: 80px;
 }
 
-/* 完整預覽圖 */
 .modal__preview-image {
   max-width: 720px;
   width: 100%;
@@ -2557,7 +2444,6 @@ button {
   object-fit: cover;
 }
 
-/* 手機版 */
 @media (max-width: 768px) {
   .modal {
     max-height: 95vh;
@@ -2595,3 +2481,4 @@ button {
     padding: 40px 12px;
   }
 }
+
