@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>六角學院-最終任務</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 頂部導航 -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="./index.html"><img src="./img/logo.svg" alt="" /></a>
+      </h1>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="">服務項目</a></li>
+          <li class="header__nav-item"><a href="">專案作品</a></li>
+          <li class="header__nav-item"><a href="./blog.html">部落格</a></li>
+          <li class="header__nav-item"><a href="">與我聯絡</a></li>
+        </ul>
+
+        <!-- hamburger -->
+        <div class="header__hambuger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- 手機板選單黑幕 -->
+    <div class="overlay"></div>
+    <!-- Part1 : 部落格看板 -->
+    <section class="blog-hero">
+      <h1 class="blog-hero__heading">
+        <p class="blog-hero__title">BLOGS</p>
+        <p class="blog-hero__subtitle">部落格</p>
+      </h1>
+      <span class="blog-hero__text-deco">BLOG</span>
+    </section>
+    <!-- Part2 : 部落格內容 -->
+    <div class="blog-container">
+        <section class="blog-list">
+ 
+      <!-- 左側直式主題按鈕 -->
+      <div class="blog-list__nav">
+        <ul class="blog-list__nav-list">
+          <li><button class="blog-list__nav-btn blog-list__nav-btn--active">全部</button></li>
+          <li><button class="blog-list__nav-btn">品牌設計</button></li>
+          <li><button class="blog-list__nav-btn">平面設計</button></li>
+          <li><button class="blog-list__nav-btn">UIUX 設計</button></li>
+          <li><button class="blog-list__nav-btn">網頁設計</button></li>
+          <li><button class="blog-list__nav-btn">設計規範</button></li>
+          <li><button class="blog-list__nav-btn">前端技術</button></li>
+          <li><button class="blog-list__nav-btn">後端架構</button></li>
+          <li><button class="blog-list__nav-btn">AI 趨勢應用</button></li>
+        </ul>
+      </div>
+ 
+      <!-- 右側卡片 -->
+      <div class="blog-list__cards">
+        <ul class="blog-list__card-list">
+          <li class="blog__card">
+            <img class="blog__card-image" src="./img/blog-img1.png" alt="blog post image" />
+            <div class="blog__card-body">
+              <p class="blog__card-label">UIUX設計 · 設計規範 · 前端技術</p>
+              <h3 class="blog__card-title">
+                10年職人手記：如何運用 Figma 與 Storybook 打造美感與邏輯兼具的企業級設計系統
+              </h3>
+              <div class="blog__card-meta">
+                <span class="blog__card-date">Oct 16, 2022</span>
+                <span class="blog__card-stats">
+                  <div class="blog__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blog__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="blog__card">
+            <img class="blog__card-image" src="./img/blog-img2.png" alt="blog post image" />
+            <div class="blog__card-body">
+              <p class="blog__card-label">品牌設計 · 平面設計</p>
+              <h3 class="blog__card-title">
+                從 0 到 1 打造品牌識別：Logo 設計背後的策略思維與視覺語言
+              </h3>
+              <div class="blog__card-meta">
+                <span class="blog__card-date">Sep 02, 2022</span>
+                <span class="blog__card-stats">
+                  <div class="blog__card-views">
+                    <img src="./img/view-icon.svg" alt="" />88 views
+                  </div>
+                  <div class="blog__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />5 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="blog__card">
+            <img class="blog__card-image" src="./img/blog-img3.png" alt="blog post image" />
+            <div class="blog__card-body">
+              <p class="blog__card-label">AI 趨勢應用 · 前端技術</p>
+              <h3 class="blog__card-title">
+                2024 AI 工具全攻略：設計師與工程師如何協作提升十倍生產力
+              </h3>
+              <div class="blog__card-meta">
+                <span class="blog__card-date">Jan 20, 2024</span>
+                <span class="blog__card-stats">
+                  <div class="blog__card-views">
+                    <img src="./img/view-icon.svg" alt="" />204 views
+                  </div>
+                  <div class="blog__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />12 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- 頁碼 -->
+      <nav class="blog-pagination">
+        <button class="blog-pagination__btn blog-pagination__btn--prev">‹</button>
+        <button class="blog-pagination__btn blog-pagination__btn--active">1</button>
+        <button class="blog-pagination__btn">2</button>
+        <button class="blog-pagination__btn">3</button>
+        <span class="blog-pagination__ellipsis">...</span>
+        <button class="blog-pagination__btn">20</button>
+        <button class="blog-pagination__btn blog-pagination__btn--next">›</button>
+      </nav>
+      </div>
+        </section>
+    </div>
+
+    <!-- Part3 : 電子報訂閱 -->
+    <section class="subscription">
+      <div class="subscription__container">
+        <div class="subscription__deco">
+          <img
+            class="subscription__deco-image"
+            src="./img/subscription1.png"
+            alt=""
+          />
+        </div>
+
+        <div class="subscription__form-wrapper">
+          <div class="subscription__header">
+            <p class="subscription__label">電子報訂閱</p>
+            <p class="subscription__title">SUBSCRIPTION</p>
+          </div>
+          <p class="subscription__desc">
+            你也在追求設計美感與技術落地的完美平衡嗎？作為資深設計師兼工程師，我深知跨領域協作的痛點。訂閱電子報，我將分享如何利用
+            AI 工具提升產能！
+          </p>
+          <div class="subscription__input-group">
+            <input
+              class="subscription__input"
+              type="text"
+              placeholder="電子信箱"
+            />
+            <button class="subscription__btn">送出</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Part4 : 與我聯絡 -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <div class="footer__info-upper">
+            <div class="footer__heading">
+              <p class="footer__label">與我聯絡</p>
+              <h2 class="footer__title">CONTACT</h2>
+            </div>
+            <div class="footer__desc">
+              <p class="footer__desc-text">若有數位產品設計和開發相關問題</p>
+              <p class="footer__desc-text">歡迎填寫表單 或 直接與我聯絡！</p>
+            </div>
+          </div>
+          <div class="footer__link">
+            <a class="footer__email" href="mailto:service@hexschool.com"
+              ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+            >
+            <div class="footer__links-btns">
+              <button class="footer__links-btn">
+                <img src="./img/icon-instagram.svg" alt="" />
+              </button>
+              <button class="footer__links-btn">
+                <img src="./img/icon-line.svg" alt="" />
+              </button>
+              <button class="footer__links-btn">
+                <img src="./img/icon-linkedin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__form-wrapper">
+          <form class="footer__form" action="">
+            <div class="footer__form-group">
+              <input class="footer__input" type="text" placeholder="姓名" />
+              <input class="footer__input" type="text" placeholder="手機號碼" />
+            </div>
+            <input class="footer__input" type="email" placeholder="電子信箱" />
+            <textarea class="footer__textarea" placeholder="備註"></textarea>
+            <button class="footer__btn" type="submit">送出</button>
+          </form>
+        </div>
+        <div class="footer__link-mobile">
+          <div class="footer__links-btns">
+            <button class="footer__links-btn">
+              <img src="./img/icon-instagram.svg" alt="" />
+            </button>
+            <button class="footer__links-btn">
+              <img src="./img/icon-line.svg" alt="" />
+            </button>
+            <button class="footer__links-btn">
+              <img src="./img/icon-linkedin.svg" alt="" />
+            </button>
+          </div>
+          <a class="footer__email" href="mailto:service@hexschool.com"
+            ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>六角學院-最終任務</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 頂部導航 -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="./index.html"><img src="./img/logo.svg" alt="" /></a>
+      </h1>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="">服務項目</a></li>
+          <li class="header__nav-item"><a href="">專案作品</a></li>
+          <li class="header__nav-item"><a href="./blog.html">部落格</a></li>
+          <li class="header__nav-item"><a href="">與我聯絡</a></li>
+        </ul>
+
+        <!-- hamburger -->
+        <div class="header__hambuger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- 手機板選單黑幕 -->
+    <div class="overlay"></div>
+
+    <!-- Part1 : 大圖看板 -->
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <img class="hero__flowerdeco" src="./img/flower.svg" alt="" />
+          <img class="hero__winddeco" src="./img/wind.svg" alt="" />
+          <img class="hero__flowerdeco2" src="./img/flower.svg" alt="" />
+          <img class="hero__winddeco2" src="./img/wind2.svg" alt="" />
+          <img class="hero__winddeco3" src="./img/wind3.svg" alt="" />
+          <div class="hero__text">
+            <div class="hero__greeting">
+              <p>Hello</p>
+              <p>I'm Nelson</p>
+            </div>
+            <div class="hero__desc">
+              <p>我是一個擁有 10 年經驗的 UIUX 設計師 和 前端工程師</p>
+              <p>喜歡把美學和程式結合，打造一個又一個精美的網頁設計！</p>
+            </div>
+          </div>
+          <div class="hero__actions">
+            <button class="btn btn--primary">與我聯絡</button>
+            <button class="btn btn--outline">我的履歷</button>
+          </div>
+        </div>
+        <div class="hero__image">
+          <img class="hero__deco1" src="./img/hero-deco1.svg" alt="" />
+          <img class="hero__deco2" src="./img/hero-deco2.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Part2 : 服務項目 -->
+    <section class="services">
+      <div class="services-container">
+        <div class="services__header">
+          <p class="services__label">服務項目</p>
+          <h2 class="services__title">SERVICES</h2>
+        </div>
+        <div class="services__body">
+          <ul class="services__list">
+            <li class="services__item">
+              <div class="services__card">
+                <div class="services__card-header">
+                  <div>
+                    <p class="services__card-tag">GRAPHIC</p>
+                    <h3 class="services__card-title">平面設計</h3>
+                  </div>
+                  <div>
+                    <img
+                      src="./img/service-icon1.svg"
+                      style="padding: 3px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="services__card-desarea">
+                  <p class="services__card-desc">
+                    從品牌識別到視覺傳達，用專業設計精準傳遞核心價值
+                  </p>
+                  <button>
+                    <img src="./img/icon-filled-btn.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__card">
+                <div class="services__card-header">
+                  <div>
+                    <p class="services__card-tag">WEBSITE</p>
+                    <h3 class="services__card-title">網頁設計</h3>
+                  </div>
+                  <div>
+                    <img
+                      src="./img/service-icon2.svg"
+                      style="padding: 3px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="services__card-desarea">
+                  <p class="services__card-desc">
+                    美感易用並重，以 Figma 打造符合直覺的數位體驗
+                  </p>
+                  <button>
+                    <img src="./img/icon-filled-btn.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__card">
+                <div class="services__card-header">
+                  <div>
+                    <p class="services__card-tag">FRONTEND</p>
+                    <h3 class="services__card-title">前端切版</h3>
+                  </div>
+                  <div>
+                    <img
+                      src="./img/service-icon3.svg"
+                      style="padding: 3px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="services__card-desarea">
+                  <p class="services__card-desc">
+                    精準轉譯設計稿細節，建構流暢穩定 RWD 響應式網頁
+                  </p>
+                  <button>
+                    <img src="./img/icon-filled-btn.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__card">
+                <div class="services__card-header">
+                  <div>
+                    <p class="services__card-tag">BACKEND</p>
+                    <h3 class="services__card-title">後端開發</h3>
+                  </div>
+                  <div>
+                    <img
+                      src="./img/service-icon4.svg"
+                      style="padding: 3px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="services__card-desarea">
+                  <p class="services__card-desc">
+                    佈署穩定系統架構，串接 API 並確保數據處理安全
+                  </p>
+                  <button>
+                    <img src="./img/icon-filled-btn.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Part3 : 專案作品 -->
+    <section class="projects">
+      <div class="projects__header">
+        <p class="projects__label">專案作品</p>
+        <h2 class="projects__title">PROJECTS</h2>
+      </div>
+      <div class="projects__body">
+        <ul class="projects__list">
+          <li class="projects__item">
+            <div
+              class="projects__card"
+              style="background-image: url(&quot;./img/project1.png&quot;)"
+            >
+              <div class="projects__card-info">
+                <!-- 左側文字 -->
+                <p class="projects__card-date">Oct 16, 2025</p>
+                <p class="projects__card-tag">平面設計 · 網頁設計</p>
+                <p class="projects__card-title">
+                  品牌視覺與電商整合，多肉植物品牌電商建置
+                </p>
+                <p class="projects__card-desc">
+                  從品牌識別設計到 RWD 網站開發，打造療癒系植栽購物體驗
+                </p>
+                <button class="btn btn--primary projects__card-btn">
+                  前往專案
+                </button>
+              </div>
+              <div class="projects__card-image"></div>
+              <!-- 右側圖片 -->
+            </div>
+          </li>
+          <li class="projects__item">
+            <div
+              class="projects__card"
+              style="background-image: url(&quot;./img/project2.png&quot;)"
+            >
+              <div class="projects__card-info">
+                <!-- 左側文字 -->
+                <p class="projects__card-date">Oct 16, 2025</p>
+                <p class="projects__card-tag">平面設計 · 網頁設計 · 前端切版</p>
+                <p class="projects__card-title">
+                  數位產品 UI/UX 設計，個人化財務視覺化軟體
+                </p>
+                <p class="projects__card-desc">
+                  運用數據視覺化邏輯，將複雜的財務數據轉化為直覺的操作介面
+                </p>
+                <button class="btn btn--primary projects__card-btn">
+                  前往專案
+                </button>
+              </div>
+              <div class="projects__card-image"></div>
+              <!-- 右側圖片 -->
+            </div>
+          </li>
+          <li class="projects__item">
+            <div
+              class="projects__card"
+              style="background-image: url(&quot;./img/project3.png&quot;)"
+            >
+              <div class="projects__card-info">
+                <!-- 左側文字 -->
+                <p class="projects__card-date">Oct 16, 2025</p>
+                <p class="projects__card-tag">前端切版 · 後端開發</p>
+                <p class="projects__card-title">
+                  品牌識別與包裝設計，法式甜點品牌視覺重塑
+                </p>
+                <p class="projects__card-desc">
+                  以溫暖、輕盈的視覺語言，精準定位高質感甜點市場的品牌形象
+                </p>
+                <button class="btn btn--primary projects__card-btn">
+                  前往專案
+                </button>
+              </div>
+              <div class="projects__card-image"></div>
+              <!-- 右側圖片 -->
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects__footer">
+        <button class="btn btn--primary">探索更多</button>
+      </div>
+    </section>
+    <!-- Part4 : 部落格 -->
+    <section class="blogs">
+      <div class="blogs__header">
+        <div>
+          <p class="blogs__label">部落格</p>
+          <h2 class="blogs__title">BLOGS</h2>
+        </div>
+        <button class="blogs__btn">探索更多</button>
+      </div>
+      <div class="blogs__cards">
+        <ul class="blogs__cards-list">
+          <li class="blogs__card">
+            <img class="blogs__card-image" src="./img/blog-img1.png" alt="" />
+            <div class="blogs__card-body">
+              <p class="blogs__card-label">UIUX設計 · 設計規範 · 前端技術</p>
+              <h3 class="blogs__card-title">
+                10年職人手記：如何運用 Figma 與 Storybook
+                打造美感與邏輯兼具的企業級設計系統
+              </h3>
+              <div class="blogs__card-meta">
+                <span class="blogs__card-date">Oct 16, 2022</span>
+                <span class="blogs__card-stats">
+                  <div class="blogs__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blogs__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="blogs__card">
+            <img class="blogs__card-image" src="./img/blog-img2.png" alt="" />
+            <div class="blogs__card-body">
+              <p class="blogs__card-label">品牌設計 · 平面設計 · UIUX設計</p>
+              <h3 class="blogs__card-title">
+                從平面識別到數位體驗：以「植感生活」為例，探討跨媒體品牌視覺在網頁上的精準轉譯
+              </h3>
+              <div class="blogs__card-meta">
+                <span class="blogs__card-date">Oct 16, 2022</span>
+                <span class="blogs__card-stats">
+                  <div class="blogs__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blogs__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="blogs__card">
+            <img class="blogs__card-image" src="./img/blog-img3.png" alt="" />
+            <div class="blogs__card-body">
+              <p class="blogs__card-label">前端技術 · 後端架構 · AI趨勢應用</p>
+              <h3 class="blogs__card-title">
+                揭開金融 App 的設計密碼：如何優化 Open Bank API
+                的複雜數據呈現與後端串接安全性
+              </h3>
+              <div class="blogs__card-meta">
+                <span class="blogs__card-date">Oct 16, 2022</span>
+                <span class="blogs__card-stats">
+                  <div class="blogs__card-views">
+                    <img src="./img/view-icon.svg" alt="" />110 views
+                  </div>
+                  <div class="blogs__card-shares">
+                    <img src="./img/share-icon.svg" alt="" />2 shares
+                  </div>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Part5 : 電子報訂閱 -->
+    <section class="subscription">
+      <div class="subscription__container">
+        <div class="subscription__deco">
+          <img
+            class="subscription__deco-image"
+            src="./img/subscription1.png"
+            alt=""
+          />
+        </div>
+
+        <div class="subscription__form-wrapper">
+          <div class="subscription__header">
+            <p class="subscription__label">電子報訂閱</p>
+            <p class="subscription__title">SUBSCRIPTION</p>
+          </div>
+          <p class="subscription__desc">
+            你也在追求設計美感與技術落地的完美平衡嗎？作為資深設計師兼工程師，我深知跨領域協作的痛點。訂閱電子報，我將分享如何利用
+            AI 工具提升產能！
+          </p>
+          <div class="subscription__input-group">
+            <input
+              class="subscription__input"
+              type="text"
+              placeholder="電子信箱"
+            />
+            <button class="subscription__btn">送出</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Part6 : 與我聯絡 -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <div class="footer__info-upper">
+            <div class="footer__heading">
+              <p class="footer__label">與我聯絡</p>
+              <h2 class="footer__title">CONTACT</h2>
+            </div>
+            <div class="footer__desc">
+              <p class="footer__desc-text">若有數位產品設計和開發相關問題</p>
+              <p class="footer__desc-text">歡迎填寫表單 或 直接與我聯絡！</p>
+            </div>
+          </div>
+          <div class="footer__link">
+            <a class="footer__email" href="mailto:service@hexschool.com"
+              ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+            >
+            <div class="footer__links-btns">
+              <button class="footer__links-btn"><img src="./img/icon-instagram.svg" alt="" /></button>
+              <button class="footer__links-btn"><img src="./img/icon-line.svg" alt="" /></button>
+              <button class="footer__links-btn"><img src="./img/icon-linkedin.svg" alt="" /></button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__form-wrapper">
+          <form class="footer__form" action="">
+            <div class="footer__form-group">
+              <input class="footer__input" type="text" placeholder="姓名" />
+              <input class="footer__input" type="text" placeholder="手機號碼" />
+            </div>
+            <input class="footer__input" type="email" placeholder="電子信箱" />
+            <textarea class="footer__textarea" placeholder="備註"></textarea>
+            <button class="footer__btn" type="submit">送出</button>
+          </form>
+        </div>
+        <div class="footer__link-mobile">
+            <div class="footer__links-btns">
+              <button class="footer__links-btn"><img src="./img/icon-instagram.svg" alt="" /></button>
+              <button class="footer__links-btn"><img src="./img/icon-line.svg" alt="" /></button>
+              <button class="footer__links-btn"><img src="./img/icon-linkedin.svg" alt="" /></button>
+            </div>
+            <a class="footer__email" href="mailto:service@hexschool.com"
+              ><img src="./img/icon-email.svg" alt="" />service@hexschool.com</a
+            >
+          </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
