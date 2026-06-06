@@ -35,6 +35,25 @@ footer, header, hgroup, menu, nav, section {
   box-sizing: border-box;
 }
 
+/* Chrome Safari Edge */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 999px;
+  border: 3px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
 body {
 	line-height: 1.5;
   color: #404040;
@@ -149,7 +168,7 @@ button {
 }
 
 /* 手機板 */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 
     .header {
         padding: 0 12px;
@@ -343,7 +362,7 @@ button {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .hero__container {
     flex-direction: column-reverse;
     height: auto;
@@ -506,7 +525,7 @@ button {
   font-weight: 500;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .services {
     padding: 40px 12px;
   }
@@ -541,6 +560,10 @@ button {
 }
 
 /* ===== Projects Section ===== */
+.projects-container {
+  background-color: white;
+}
+
 .projects {
   max-width: 1296px;
   margin: 0 auto;
@@ -636,7 +659,7 @@ button {
     align-items: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .projects {
     padding: 40px 12px;
     gap: 24px;
@@ -794,7 +817,7 @@ button {
   gap: 4px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .blogs {
     padding: 40px 12px;
     gap: 20px;
@@ -1460,7 +1483,7 @@ button {
   padding: 0 4px;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 768px) {
   /* 整體版面 */
   .blog-list {
     flex-direction: column;
@@ -1733,7 +1756,10 @@ button {
 /* =====================
    手機版
    ===================== */
-@media (max-width: 376px) {
+@media (max-width: 768px) {
+  .blog-post-breadcrumb {
+    padding: 0px 12px;
+  }
   .blog-post-detail__container {
     padding: 40px 12px;
     gap: 16px;
@@ -1881,7 +1907,7 @@ button {
 /* =====================
    手機版
    ===================== */
-@media (max-width: 376px) {
+@media (max-width: 768px) {
   .service-hero {
     gap: 24px;
     padding: 40px 16px;
@@ -2196,7 +2222,7 @@ button {
 
 /* 右側列表 */
 .service-qa__list {
-  flex: 1;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2270,6 +2296,7 @@ button {
   }
 
   .service-qa__question {
+    width: 100%;
     font-size: 16px;
   }
 }
@@ -2541,6 +2568,30 @@ button {
   }
 
   .modal__body {
-    padding: 16px;
+    padding: 24px 12px;
+  }
+
+  .modal__desc-area {
+    flex-direction: column;
+  }
+
+  .modal__desc {
+    width: 100%;
+  }
+
+  .modal__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 10px 0px;
+    padding-top: 24px;
+    padding-left: 0px;
+    width: 100%;
+    border-top: 1px solid #737373;
+    border-left: unset;
+  }
+
+  .modal__preview {
+    padding: 40px 12px;
   }
 }
